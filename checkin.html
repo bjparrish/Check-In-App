@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+<link href="jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+</head> 
+<body>
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>All-Size Corrugated</h1>
+    <p> <h2> Check It In</h2> </p>
+  </div>
+  <div data-role="content">
+  <img src="images/home-screen-img.jpg" width="100%" height="auto" alt=""/> 
+  <a href="#mainMenu" data-role="button">Continue to Main Menu</a></div>
+  <div data-role="footer">
+    <h4>Copyright 2014</h4>
+  </div>
+</div> 
+
+<div data-role="page" id="mainMenu">
+	<div data-role="header">
+		<h1> Choose an Item to Check</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#cuttingDie">Cutting Die</a></li>
+            <li><a href="#printingPlate">Printing Plate</a></li>
+			<li><a href="#requestRepair">Request for Tooling Repair</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer" align="center">Created by Bryan Parrish
+	</div>
+</div>
+
+<div data-role="page" id="cuttingDie">
+	<div data-role="header">
+		<h1>Cutting Die</h1>
+	</div>
+	<div data-role="content">	
+    
+		<form action="cuttingDieForm.php">
+        
+        
+        <p>
+        <label for="customer" >Customer Name:</label>
+        <select name="customer" id="customer">
+        <option value="allSizeCorr">All-Size Corrugated</option>
+                <option value="ivc">International Vaitman Corp.</option>
+                        <option value="ch">Calloway House</option>
+                                <option value="dogFishHead">DogFish Head Brewery</option>
+                                        <option value="rmp">R.M. Palmer</option>
+        </select>
+        </p>
+        <div data-role="fieldcontain">
+          <fieldset data-role="controlgroup" data-type="horizontal">
+            <legend>C/D Press:</legend>
+            <input type="radio" name="cdPress" id="baysek" value="baysek" />
+            <label for="baysek">Baysek</label>
+            <input type="radio" name="cdPress" id="bobst" value="bobst" />
+            <label for="bobst">Bobst</label>
+            <input type="radio" name="cdPress" id="rotary" value="rotary" />
+            <label for="rotary">Rotary</label>
+          </fieldset>
+        </div>
+        <p>
+          <label for="cdnum">C/D Number:</label>
+        <input type="text" name="cdnum" id="cdnum">
+        </p>
+        <input name="submit" type="submit" id="submit" value="This Item is Checked In"/> 
+        
+        
+        </form>
+	</div>
+	<div data-role="footer">
+		<a href="#mainMenu" data-role="button" data-icon="back" data-iconpos="notext">Button</a>
+        
+	</div>
+</div>
+
+<div data-role="page" id="printingPlate">
+	<div data-role="header">
+		<h1>Page Three</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+			<a href="#mainMenu" data-role="button" data-icon="back" data-iconpos="notext">Button</a>
+	</div>
+</div>
+
+<div data-role="page" id="requestRepair">
+	<div data-role="header">
+		<h1>Page Four</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+			<a href="#mainMenu" data-role="button" data-icon="back" data-iconpos="notext">Button</a>
+	</div>
+</div>
+
+
+
+</body>
+</html>
